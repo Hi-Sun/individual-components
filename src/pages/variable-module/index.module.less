@@ -1,0 +1,100 @@
+.pageContent {
+  display: flex;
+}
+
+.pagePreview,
+.pagePanel {
+  position: relative;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #eceef1;
+  z-index: 0;
+}
+
+.pagePanel {
+  flex: 1;
+  margin: 8px 12px;
+}
+
+.pagePreview {
+  width: 400px;
+  margin: 8px 12px 12px 0;
+}
+
+.previewContent {
+  background: #f8f9fa;
+  padding: 12px 16px;
+  border: 1px solid #eceef1;
+  border-radius: 2px;
+  height: calc(100% - 40px);
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000080;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: 	#4169e1;
+  }
+}
+
+.panelTitle {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 11px;
+  margin-bottom: 8px;
+  color: #1f2329;
+
+  &:before {
+    content: '';
+    background: #0084ff;
+    width: 3px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+  }
+}
+
+.baseInfoForm {
+  width: 747px;
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+    .ant-form-item-row .ant-form-item-label label {
+      margin-right: 12px;
+    }
+
+    .ant-input-textarea-show-count > .ant-input {
+      height: 76px;
+    }
+
+    .ant-input-number-group {
+      width: 131px;
+    }
+
+    .ant-radio-group {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .numberSelect {
+    display: flex;
+    align-items: center;
+  }
+}

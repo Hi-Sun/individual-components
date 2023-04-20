@@ -16,12 +16,13 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["./src/*"]
+      "@src/*": ["./src/*"],
+      "@components/*": ["./components/*"]
     },
     "incremental": true
   },
   "include": [
-    "./global.declaration.d.ts",
+    "./global.d.ts",
     "./src/next-env.d.ts",
     "next-env.d.ts",
     "./src/**/*.ts",
