@@ -1,4 +1,4 @@
-import ImageLazy from '@components/image-lazy';
+import ImageLazy from '@components/ImageLazy';
 import s from './index.module.less';
 
 const ImageLazyPage = () => {

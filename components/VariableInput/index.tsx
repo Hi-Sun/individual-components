@@ -5,10 +5,10 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import s from './index.module.less';
 
 interface VariableInputProps {
-  value: string;
-  label: string;
-  name: string;
-  variableChange: (value: string) => void;
+  value: string; // 输入框初始默认值
+  label: string; // FormItem 标题
+  name: string; // FormItem 参数名称
+  variableChange: (value: string) => void; // 输入框变化的回调函数
 }
 
 export const VARIABLE_REG = /\[X(.*?)\]/g;

@@ -1,5 +1,9 @@
 # image-lazy 图片懒加载组件
 
+### Functionality
+本组件采用img标签提供的loading属性实现图片懒加载功能，在图片进入可视区域内再加载图片数据以实现一定的性能优化，同时可设置图片加载时的loading效果
+兼容性：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img
+
 ### props
 ```typescript
 export interface TImageLazyProps {
@@ -20,35 +24,11 @@ export interface TImageLazyProps {
 }
 ```
 
-### usage
-```typescript
-import ImageLazy from '@tyc-pc/image-lazy'
-```
+### Usage
+详见src/pages/image-lazy文件
 
-### temple
+### Temple
 ```typescript
-// temple1 
-<ImageLazy
-  src="https://img5.tianyancha.com/logo/lll/9c253737458dabb5406ffd8e6fc2dd50.png@!f_200x200"
-  width={48}
-  height={48}
-  alt="中国电信"
-  onLoad={() => {
-    console.log('加载完成')
-  }}
-  onError={() => {
-    console.log('加载失败')
-  }}
-/>
-
-// temple2
-<ImageLazy
-  src="https://img5.tianyancha.com/logo/lll/9c253737458dabb5406ffd8e6fc2dd50.png@!f_200x200"
-  width={48}
-  height={48}
-  alt="中国电信"
-  loadingBg="#ff8300"
-  loadingOpacity="0.2"
-  loadingImage="https://cdn.tianyancha.com/web-require-js/public/images/no-data-common.png"
-/>
+yarn dev 运行项目
+浏览器打开 http://localhost:3001/image-lazy 
 ```
