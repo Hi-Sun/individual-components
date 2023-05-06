@@ -29,6 +29,7 @@ export interface TImageLazyProps {
 ### Temple
 
 ```typescript
+yarn 安装依赖
 yarn dev 运行项目
 浏览器打开 http://localhost:3001/variable-module
 ```

@@ -1,0 +1,64 @@
+.root {
+  position: relative;
+  color: #333;
+}
+
+.scrollWrap {
+  display: flex;
+  align-items: center;
+}
+
+.scrollPreview,
+.scrollNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 52px;
+  border-radius: 2px;
+  color: #999;
+  background: #f6f6f6;
+  cursor: pointer;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+.scrollPreview {
+  margin: 0 8px 0 0;
+}
+
+.scrollNext {
+  margin: 0 0 0 8px;
+}
+
+.scrollIcon {
+  font-size: 12px;
+}
+
+.scrollContent {
+  flex: 1;
+  overflow: hidden;
+}
+
+.scrollContentInner {
+  display: flex;
+  width: fit-content;
+  white-space: nowrap;
+  transition: all 1s;
+}
+
+.scrollContentTips {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #999;
+}
+
+.scrollShadow {
+  .scrollContentTips {
+    margin-top: 0;
+  }
+}
+
