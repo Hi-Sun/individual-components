@@ -14,6 +14,7 @@ interface VariableInputProps {
 export const VARIABLE_REG = /\[X(.*?)\]/g;
 export const VARIABLE_ARRAY = ['[X1]', '[X2]', '[X3]', '[X4]', '[X5]'];
 
+/**@abstract 变量输入组件 */
 const VariableInput: FC<VariableInputProps> = ({ value, label, name, variableChange }) => {
   const [inputValue, setInputValue] = useState<string>('');
   const inputRef = useRef<TextAreaRef>(null);

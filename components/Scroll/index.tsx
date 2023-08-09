@@ -10,6 +10,7 @@ interface TScrollProps {
   contentClassName?: string;
 }
 
+/**@abstract 左右滚动容器组件 */
 const Scroll: FC<TScrollProps> = (props) => {
   const { step, tips = '', className = '', contentClassName = '' } = props;
   const [x, setX] = useState<number>(0);

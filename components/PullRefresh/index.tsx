@@ -2,6 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import { PullRefreshStatus, TPullRefreshProps } from './types';
 import s from './index.module.less';
 
+/**@abstract 下拉刷新组件 */
 const PullRefresh: FC<TPullRefreshProps> = (props) => {
   const {
     style,

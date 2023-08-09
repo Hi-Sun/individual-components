@@ -2,6 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import copy from 'copy-to-clipboard';
 import { TCopyToClipboardProps } from './type';
 
+/**@abstract 长按复制内容至粘贴板 */
 const CopyToClipboard: FC<TCopyToClipboardProps> = (props) => {
   const { className, children, text, delay = 2000 } = props;
   const [copyText, setCopyText] = useState<string>('');

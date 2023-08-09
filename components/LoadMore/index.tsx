@@ -3,6 +3,7 @@ import { throttle } from 'lodash';
 import { TLoadMoreProps } from './types';
 import s from './index.module.less';
 
+/**@abstract 上拉加载组件 */
 const LoadMore: FC<TLoadMoreProps> = (props) => {
   const {
     className,

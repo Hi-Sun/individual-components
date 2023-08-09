@@ -2,6 +2,7 @@ import React, { FC, useMemo, useState } from 'react';
 import { TImageLazyProps } from './types';
 import { getDefaultImage } from './utils';
 
+/**@abstract 图片懒加载组件 */
 const ImageLazy: FC<TImageLazyProps> = (props) => {
   const {
     style,
