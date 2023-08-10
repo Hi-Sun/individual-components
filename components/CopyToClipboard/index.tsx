@@ -5,16 +5,16 @@ import { TCopyToClipboardProps } from './type';
 /**@abstract 长按复制内容至粘贴板 */
 const CopyToClipboard: FC<TCopyToClipboardProps> = (props) => {
   const { className, children, text, delay = 2000 } = props;
-  const [copyText, setCopyText] = useState<string>('');
 
-  let pressTimer: null | ReturnType<typeof setTimeout> = null;
+  const pressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const eleRef: React.LegacyRef<HTMLDivElement> = useRef(null);
 
   const handleTouchStart = () => {
-    if (pressTimer == null) {
+    if (pressTimer.current === null) {
       // 创建定时器 （2s之后执行长按功能函数）
-      pressTimer = setTimeout(() => {
+      pressTimer.current = setTimeout(() => {
+        const copyText = text || eleRef?.current?.innerText || '';
         copy(copyText);
         alert('复制成功');
       }, delay);
@@ -22,16 +22,11 @@ const CopyToClipboard: FC<TCopyToClipboardProps> = (props) => {
   };
 
   const handleTouchEnd = () => {
-    if (pressTimer != null) {
-      clearTimeout(pressTimer);
-      pressTimer = null;
+    if (pressTimer.current != null) {
+      clearTimeout(pressTimer.current);
+      pressTimer.current = null;
     }
   };
-
-  useEffect(() => {
-    const elementText = text || eleRef?.current?.innerText || '';
-    setCopyText(elementText);
-  }, [text]);
 
   return (
     <div
