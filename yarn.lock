@@ -2792,6 +2792,11 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
+"runes2@^1.1.2":
+  "integrity" "sha512-v6XIdRpUKdFLNhgF2AC9XvntZsDzxyTpVlpQ8HD592XD6vHiW8jEcHFnTV5ztUjWJC5cGOcdi9YKIwxWVh0f9w=="
+  "resolved" "https://registry.npmmirror.com/runes2/-/runes2-1.1.2.tgz"
+  "version" "1.1.2"
+
 "safe-regex-test@^1.0.0":
   "integrity" "sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA=="
   "resolved" "https://registry.npmmirror.com/safe-regex-test/-/safe-regex-test-1.0.0.tgz"
